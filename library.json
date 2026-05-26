@@ -1,0 +1,42 @@
+[
+    {
+        "type": "physical",
+        "title": "Python Crash Course",
+        "author": "Eric Mathes",
+        "isbn": "001",
+        "available": true,
+        "shelf_location": "A1"
+    },
+    {
+        "type": "physical",
+        "title": "The Programatic Programmer",
+        "author": "David Thomas",
+        "isbn": "003",
+        "available": true,
+        "shelf_location": "C2"
+    },
+    {
+        "type": "physical",
+        "title": "Clean Code",
+        "author": "Robert Martin",
+        "isbn": "002",
+        "available": true,
+        "shelf_location": "B3"
+    },
+    {
+        "type": "ebook",
+        "title": "Automate The Boring stuff",
+        "author": "AI Sweigart",
+        "isbn": "004",
+        "available": true,
+        "file_size_mb": 5.2
+    },
+    {
+        "type": "physical",
+        "title": "Fluent Python",
+        "author": "Luciano Ramalho",
+        "isbn": "005",
+        "available": true,
+        "shelf_location": "8.7"
+    }
+]
