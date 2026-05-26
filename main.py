@@ -23,7 +23,6 @@ def main():
             shelf_location=input("Enter Shelf Location:")
             book=PhysicalBook(title,author,isbn,available,shelf_location)
             library.add_book(book)
-            library.save_to_json()
             print("✅ Physical Book Added Successfully!")
         elif choice=="2":
             title=input("Enter Title:")
@@ -33,7 +32,6 @@ def main():
             file_size_mb=float(input("Enter File Size (MB):"))
             ebook=EBook(title,author,isbn,available,file_size_mb)
             library.add_book(ebook)
-            library.save_to_json()
             print("✅ EBook Added Successfully!")
         elif choice=="3":
             isbn=input("Enter ISBN to Checkout:")
@@ -49,7 +47,6 @@ def main():
         elif choice=="7":
             isbn=input("Enter ISBN to Remove:")
             print(library.remove_book(isbn))
-            library.save_to_json()
         elif choice=="8":
             library.save_to_json()
             print("Exiting...")

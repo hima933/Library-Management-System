@@ -28,23 +28,28 @@ class Library:
         self.books = books if books is not None else []
     def add_book(self,book):
         self.books.append(book)
+        self.save_to_json()
     def remove_book(self,isbn):
          original_count = len(self.books)
          self.books = [book for book in self.books if book.isbn != isbn]
          if len(self.books) == original_count:
-             return "Book not found"   # ✅ user gets feedback
+             return "Book not found" 
+         self.save_to_json()  # ✅ user gets feedback
          return " ✅ Book removed successfully"
     def checkout_book(self,isbn):
         for book in self.books:
             if book.isbn==isbn and book.available:
                 book.available=False
                 return f"checked out {book.title}"
+            self.save_to_json()
         return "Book not available for checkout"
+        
     def return_book(self,isbn):
         for book in self.books:
             if book.isbn==isbn and not book.available:
                 book.available=True
                 return f"returned {book.title}"
+            self.save_to_json()
         return "Book not found or already available"
     def search_by_author(self,author):
         for book in self.books:
