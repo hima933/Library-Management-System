@@ -48,8 +48,7 @@ def main():
             library.list_available_books()
         elif choice=="7":
             isbn=input("Enter ISBN to Remove:")
-            library.remove_book(isbn)
-            print("✅ Book Removed Successfully!")
+            print(library.remove_book(isbn))
             library.save_to_json()
         elif choice=="8":
             library.save_to_json()
